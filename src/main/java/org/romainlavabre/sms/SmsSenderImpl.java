@@ -1,6 +1,7 @@
 package org.romainlavabre.sms;
 
 import org.romainlavabre.exception.HttpInternalServerErrorException;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,7 +14,9 @@ public class SmsSenderImpl implements SmsSender {
     protected final SmsSender smsSenderSmsMode;
 
 
-    public SmsSenderImpl( SmsSender smsSenderTwilio, SmsSender smsSenderSmsMode ) {
+    public SmsSenderImpl(
+            @Qualifier("smsSenderTwilio") SmsSender smsSenderTwilio,
+            @Qualifier("smsSenderSmsMode") SmsSender smsSenderSmsMode ) {
         this.smsSenderTwilio  = smsSenderTwilio;
         this.smsSenderSmsMode = smsSenderSmsMode;
     }

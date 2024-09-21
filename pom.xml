@@ -6,7 +6,7 @@
 
     <groupId>org.romainlavabre</groupId>
     <artifactId>sms</artifactId>
-    <version>4.0.0</version>
+    <version>5.0.0</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,17 +18,17 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>6.1.1</version>
+            <version>6.1.13</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>6.1.1</version>
+            <version>6.1.13</version>
         </dependency>
         <dependency>
             <groupId>org.romainlavabre</groupId>
             <artifactId>rest</artifactId>
-            <version>2.0.0</version>
+            <version>3.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.romainlavabre</groupId>
@@ -39,15 +39,7 @@
         <dependency>
             <groupId>com.twilio.sdk</groupId>
             <artifactId>twilio</artifactId>
-            <version>8.9.0</version>
-        </dependency>
-
-        <!-- TEST -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <version>10.5.1</version>
         </dependency>
     </dependencies>
 

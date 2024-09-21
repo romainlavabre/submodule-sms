@@ -1,10 +1,9 @@
 package org.romainlavabre.sms;
 
+import org.springframework.stereotype.Service;
+import java.util.List;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author Romain Lavabre <romainlavabre98@gmail.com>
