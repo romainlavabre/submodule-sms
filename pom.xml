@@ -6,7 +6,7 @@
 
     <groupId>org.romainlavabre</groupId>
     <artifactId>sms</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>6.1.13</version>
+            <version>6.1.14</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.twilio.sdk</groupId>
             <artifactId>twilio</artifactId>
-            <version>10.5.1</version>
+            <version>10.7.2</version>
         </dependency>
     </dependencies>
 
@@ -109,4 +109,10 @@
             <url>s3://fairfair-maven-repository</url>
         </repository>
     </distributionManagement>
+    <repositories>
+        <repository>
+            <id>fairfair-maven-repository</id>
+            <url>https://fairfair-maven-repository.s3.eu-west-3.amazonaws.com</url>
+        </repository>
+    </repositories>
 </project>
