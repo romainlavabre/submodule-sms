@@ -9,6 +9,8 @@ public class SmsConfigurer {
     private        String        twilioPrivateKey;
     private        String        provider;
     private        String        redirectTo;
+    private        String        smsModeUrl    = "https://rest.smsmode.com/sms/v1/messages";
+    private        int           timeoutMillis = 10_000;
 
 
     public SmsConfigurer() {
@@ -102,6 +104,38 @@ public class SmsConfigurer {
      */
     public SmsConfigurer setRedirectTo( String redirectTo ) {
         this.redirectTo = redirectTo;
+
+        return this;
+    }
+
+
+    protected String getSmsModeUrl() {
+        return smsModeUrl;
+    }
+
+
+    /**
+     * @param smsModeUrl used by {@link SmsMode#send(String, String, String)}, default
+     *                   <code>https://rest.smsmode.com/sms/v1/messages</code>
+     */
+    public SmsConfigurer setSmsModeUrl( String smsModeUrl ) {
+        this.smsModeUrl = smsModeUrl;
+
+        return this;
+    }
+
+
+    protected int getTimeoutMillis() {
+        return timeoutMillis;
+    }
+
+
+    /**
+     * @param timeoutMillis connection and answer timeout of {@link SmsMode#send(String, String, String)}, default
+     *                      10 000
+     */
+    public SmsConfigurer setTimeoutMillis( int timeoutMillis ) {
+        this.timeoutMillis = timeoutMillis;
 
         return this;
     }

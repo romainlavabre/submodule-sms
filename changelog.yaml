@@ -1,3 +1,4 @@
+5.1.0: ADD SmsSegments (GSM-7 / UCS-2 parts), SmsMode.send( to, text, sender ) with the parts counted by smsmode and failures thrown
 5.0.1: FIX CVE
 5.0.0: FIX CVE
 4.0.0: fairfair-cloud/roadmap#16
