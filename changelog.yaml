@@ -1,3 +1,4 @@
+5.2.0: ADD the SMTP provider (development: each SMS becomes a mail to a catch-all SMTP server such as Mailpit), SmsSenderImpl.send( to, text, sender ) through the configured provider
 5.1.0: ADD SmsSegments (GSM-7 / UCS-2 parts), SmsMode.send( to, text, sender ) with the parts counted by smsmode and failures thrown
 5.0.1: FIX CVE
 5.0.0: FIX CVE

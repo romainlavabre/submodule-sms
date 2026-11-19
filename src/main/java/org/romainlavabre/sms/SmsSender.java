@@ -8,6 +8,7 @@ import java.util.List;
 public interface SmsSender {
     String PROVIDER_SMS_MODE = "SMS_MODE";
     String PROVIDER_TWILIO   = "TWILIO";
+    String PROVIDER_SMTP     = "SMTP";
 
 
     /**

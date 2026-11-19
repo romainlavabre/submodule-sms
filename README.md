@@ -38,3 +38,20 @@ sent.segments(); // body.messagePartCount of smsmode, null when it does not say
 
 `smsSender.send( to, message, from, name )` returns a `Result` (`isSuccess`, `getMessageId`) and picks the provider
 from `setProvider( "SMS_MODE" | "TWILIO" )`; `setRedirectTo` sends everything to one number.
+
+## SMTP provider (5.2.0)
+
+For development only: each SMS becomes a plain text mail to a catch-all SMTP server (Mailpit…), never a real SMS.
+
+```java
+SmsConfigurer.init()
+        .setProvider( "SMTP" )
+        .setSmtpUri( "smtp://mailpit:1025" )
+        .build();
+
+SmsMode.Sent sent = smsSender.send( "+33600000001", text, "PLOMBIER" ); // SmsSenderImpl
+```
+
+The mail goes from `PLOMBIER <sms@sms.localhost>` to `33600000001@sms.localhost`. `SmsSenderImpl.send( to, text, sender )`
+has the contract of `SmsMode.send( to, text, sender )` and uses the provider of `setProvider( "SMS_MODE" | "SMTP" )`;
+`Sent.segments()` is counted by `SmsSegments` for SMTP.

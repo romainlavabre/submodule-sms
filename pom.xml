@@ -6,7 +6,7 @@
 
     <groupId>org.romainlavabre</groupId>
     <artifactId>sms</artifactId>
-    <version>5.1.0</version>
+    <version>5.2.0</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -46,7 +46,19 @@
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
+        <!-- SMTP provider -->
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-mail</artifactId>
+            <version>2.0.5</version>
+        </dependency>
         <!-- TEST -->
+        <dependency>
+            <groupId>com.icegreen</groupId>
+            <artifactId>greenmail</artifactId>
+            <version>2.1.3</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>

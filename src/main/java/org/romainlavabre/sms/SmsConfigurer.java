@@ -11,6 +11,7 @@ public class SmsConfigurer {
     private        String        redirectTo;
     private        String        smsModeUrl    = "https://rest.smsmode.com/sms/v1/messages";
     private        int           timeoutMillis = 10_000;
+    private        String        smtpUri;
 
 
     public SmsConfigurer() {
@@ -38,7 +39,7 @@ public class SmsConfigurer {
 
 
     /**
-     * @param provider SMS_MODE | TWILIO
+     * @param provider SMS_MODE | TWILIO | SMTP (development only, see {@link Smtp})
      * @return
      */
     public SmsConfigurer setProvider( String provider ) {
@@ -136,6 +137,22 @@ public class SmsConfigurer {
      */
     public SmsConfigurer setTimeoutMillis( int timeoutMillis ) {
         this.timeoutMillis = timeoutMillis;
+
+        return this;
+    }
+
+
+    protected String getSmtpUri() {
+        return smtpUri;
+    }
+
+
+    /**
+     * @param smtpUri the catch-all SMTP server of the SMTP provider, e.g. <code>smtp://mailpit:1025</code>; only its
+     *                host and port are used
+     */
+    public SmsConfigurer setSmtpUri( String smtpUri ) {
+        this.smtpUri = smtpUri;
 
         return this;
     }
